@@ -6,21 +6,33 @@ Record your responses inside the fenced code blocks below each question.
     and what are the main task(s) you perform inside an Ember Route?
 
     ```md
-    <!-- your response here -->
+    The Ember router is where the routes for the application are mapped. For
+    example, if you have an 'about' view, you would want to indicate
+    the path here (this.route('about') etc.)
+
+    The Ember route is where the model for the data lives. It is the main
+    source for the structure of the data.
+
+    source: class notes
     ```
 
 1.  What is the command to generate a route named `boston` nested under
     `campus`?
 
     ```md
-    <!-- your response here -->
+    ember g route campus/boston
     ```
 
 1.  Suppose you have a nested route at the URL `/campus/boston`. How would you
     use the `link-to` helper to generate an appropriate link?
 
     ```md
-    <!-- your response here -->
+    In the template for boston, nested under campus, you would want to code:
+    ```
+    {{#link-to 'campus'}}Back{{/link-to}}
+    ```
+
+    source: class notes
     ```
 
 1.  Explain **at least** two differences between the following two route
@@ -35,7 +47,13 @@ Record your responses inside the fenced code blocks below each question.
     ```
 
     ```md
-    <!-- your response here -->
+    The first one (beause of the function) indicates that the product route is
+    nested under the products route.
+
+    The second one indicates that the product route is its own route to a singular
+    product.
+
+    source: class notes
     ```
 
 1.  Suppose we have the following route definition:
@@ -48,11 +66,19 @@ Record your responses inside the fenced code blocks below each question.
     value `'123'` inside a Route?
 
     ```md
-    <!-- your response here -->
+    In the route.js file of movies model, you would want to reference the data params
+    array
+    ```
+    [params.movie_id];
+    ```
+
+    source: class notes
     ```
 
 1.  Inside a template, how do we reference data provided by a Route?
 
     ```md
-    <!-- your response here -->
+    {{#link-to}}
+
+    source: class notes
     ```
